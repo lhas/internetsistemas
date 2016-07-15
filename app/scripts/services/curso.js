@@ -2,16 +2,16 @@
 
 /**
  * @ngdoc service
- * @name internetsistemasApp.estudanteService
+ * @name internetsistemasApp.cursoService
  * @description
- * # estudanteService
+ * # cursoService
  * Service in the internetsistemasApp.
  */
 angular.module('internetsistemasApp')
-  .service('estudanteService', function ($http) {
+  .service('cursoService', function ($http) {
 
     this.getAll = function() {
-      return $http.get("dados/estudantes.json");
+      return $http.get("dados/cursos.json");
     }
     // AngularJS will instantiate a singleton by calling "new" on this function
   });
