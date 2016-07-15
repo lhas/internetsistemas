@@ -12,7 +12,8 @@ angular
   .module('internetsistemasApp', [
     'ngCookies',
     'ngRoute',
-    'ngSanitize'
+    'ngSanitize',
+    'yaru22.angular-timeago'
   ])
   .config(function ($routeProvider) {
     $routeProvider
