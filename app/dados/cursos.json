@@ -1,11 +1,17 @@
 [
   {
-    "nome": "AngularJS"
+    "nome": "AngularJS",
+    "createdAt": "2016-07-15T18:25:43.511Z",
+    "modifiedAt": "2016-07-15T18:25:43.511Z"
   }
   ,{
-    "nome": "ECMAScript 2015"
+    "nome": "ECMAScript 2015",
+    "createdAt": "2016-07-15T18:25:43.511Z",
+    "modifiedAt": "2016-07-15T18:25:43.511Z"
   }
   ,{
-    "nome": "React"
+    "nome": "React",
+    "createdAt": "2016-07-15T18:25:43.511Z",
+    "modifiedAt": "2016-07-15T18:25:43.511Z"
   }
 ]

@@ -1,1 +1,17 @@
-<p>This is the cursos view.</p>
+<div class="row">
+  <div class="col-xs-12">
+
+    <p>
+      <a data-toggle="modal" data-target="#modal-formulario" class="btn btn-success btn-lg">Adicionar Novo Curso</a>
+    </p>
+
+    <div class="table-responsive" ng-include="'views/cursos/tabela.html'">
+    </div>
+
+    <div class="alert alert-info" ng-if="cursos.length == 0">Não há cursos cadastrados no momento.</div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="modal-formulario" ng-include="'views/cursos/formulario.html'">
+</div>

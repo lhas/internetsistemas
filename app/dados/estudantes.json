@@ -4,10 +4,12 @@
     "sexo": "Masculino",
     "email": "luizhrqas@gmail.com",
     "data_de_nascimento": "28/04/1995",
-    "createdAt": "15/07/2016",
-    "modifiedAt": "15/07/2016",
+    "createdAt": "2016-07-15T18:25:43.511Z",
+    "modifiedAt": "2016-07-15T18:25:43.511Z",
     "cursos": [
-      {"nome": "AngularJS"}
+      {"nome": "AngularJS",
+      "createdAt": "2016-07-15T18:25:43.511Z",
+      "modifiedAt": "2016-07-15T18:25:43.511Z"}
     ]
   },
   {
@@ -15,11 +17,15 @@
     "sexo": "Masculino",
     "email": "rh@internetsistemas.com.br",
     "data_de_nascimento": "15/01/1989",
-    "createdAt": "15/07/2016",
-    "modifiedAt": "15/07/2016",
+    "createdAt": "2016-07-15T18:25:43.511Z",
+    "modifiedAt": "2016-07-15T18:25:43.511Z",
     "cursos": [
-       {"nome": "React"}
-      ,{"nome": "ECMAScript 2015"}
+       {"nome": "React",
+        "createdAt": "2016-07-15T18:25:43.511Z",
+        "modifiedAt": "2016-07-15T18:25:43.511Z"}
+      ,{"nome": "ECMAScript 2015",
+        "createdAt": "2016-07-15T18:25:43.511Z",
+        "modifiedAt": "2016-07-15T18:25:43.511Z"}
     ]
   }
 ]
