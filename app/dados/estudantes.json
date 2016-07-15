@@ -1,0 +1,25 @@
+[
+  {
+    "nome": "Luiz Almeida",
+    "sexo": "Masculino",
+    "email": "luizhrqas@gmail.com",
+    "data_de_nascimento": "28/04/1995",
+    "createdAt": "15/07/2016",
+    "modifiedAt": "15/07/2016",
+    "cursos": [
+      {"nome": "AngularJS"}
+    ]
+  },
+  {
+    "nome": "Felipe",
+    "sexo": "Masculino",
+    "email": "rh@internetsistemas.com.br",
+    "data_de_nascimento": "15/01/1989",
+    "createdAt": "15/07/2016",
+    "modifiedAt": "15/07/2016",
+    "cursos": [
+       {"nome": "React"}
+      ,{"nome": "ECMAScript 2015"}
+    ]
+  }
+]
