@@ -23,6 +23,11 @@
         </div>
         
         <div class="form-group">
+          <label>Data de Nascimento</label>
+          <input type="text" ng-model="estudante.data_de_nascimento" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
           <label>E-mail</label>
           <input type="email" ng-model="estudante.email" class="form-control" required>
         </div>
@@ -37,6 +42,7 @@
       
     </div>
     <div class="modal-footer">
+      <button type="button" class="btn btn-success" ng-click="salvar(estudante)">Salvar Estudante</button>
       <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
     </div>
   </div>

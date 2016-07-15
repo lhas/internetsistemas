@@ -16,10 +16,10 @@
       <td>{{estudante.sexo}}</td>
       <td>{{estudante.email}}</td>
       <td>{{estudante.data_de_nascimento}}</td>
-      <td>{{estudante.createdAt}}</td>
-      <td>{{estudante.modifiedAt}}</td>
+      <td><span class="label label-default"><time-ago from-time='{{estudante.createdAt}}'></time-ago></span> </td>
+      <td><span class="label label-default"><time-ago from-time='{{estudante.modifiedAt}}'></time-ago></span></td>
       <td>
-        <span class="label label-default" ng-repeat="curso in estudante.cursos">{{curso.nome}}</span>
+        <span class="label label-primary" ng-repeat="curso in estudante.cursos">{{curso.nome}}</span>
       </td>
       <td>
         <a href="javascript:void(0);" ng-click="editar($index)" class="btn btn-default">Editar</a>

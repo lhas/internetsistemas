@@ -11,10 +11,31 @@ angular.module('internetsistemasApp')
   .controller('EstudantesCtrl', function ($scope, estudanteService) {
     $scope.estudantes = [];
     $scope.estudante = {};
+    $scope.editando = -1;
 
     estudanteService.getAll().then(function(result) {
       $scope.estudantes = result.data;
     });
+
+    $scope.manipularModal = function(param) {
+      angular.element("#modal-formulario").modal(param);
+    }
+
+    $scope.salvar = function(estudante) {
+      estudante.modifiedAt = new Date();
+
+      if($scope.editando == -1) {
+        estudante.createdAt = new Date();
+        $scope.estudantes.push(estudante);
+      } else {
+        var index = $scope.editando;
+        $scope.estudantes[index] = estudante;
+      }
+
+      $scope.estudante = {};
+      $scope.editando = -1;
+      $scope.manipularModal("hide");
+    }
 
     $scope.excluir = function(index) {
       $scope.estudantes.splice(index, 1);
@@ -22,8 +43,8 @@ angular.module('internetsistemasApp')
     }
 
     $scope.editar = function(index) {
-      $scope.estudante = $scope.estudantes[index];
-
-      angular.element("#modal-formulario").modal("show");
+      $scope.editando = index;
+      $scope.estudante = angular.copy($scope.estudantes[index]);
+      $scope.manipularModal("show");
     }
   });
