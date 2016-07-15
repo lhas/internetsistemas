@@ -14,7 +14,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'yaru22.angular-timeago',
-    'valdr'
+    'valdr',
+    'ui.mask'
   ])
   .config(function(valdrProvider) {
     valdrProvider.addConstraints({

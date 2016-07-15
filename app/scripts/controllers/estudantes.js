@@ -21,7 +21,7 @@ angular.module('internetsistemasApp')
       angular.element("#modal-formulario").modal(param);
     }
 
-    $scope.salvar = function(estudante) {
+    $scope.salvar = function(estudante, formulario) {
       estudante.modifiedAt = new Date();
 
       if($scope.editando == -1) {
@@ -35,6 +35,9 @@ angular.module('internetsistemasApp')
       $scope.estudante = {};
       $scope.editando = -1;
       $scope.manipularModal("hide");
+
+      formulario.$setPristine();
+      formulario.$setUntouched();
     }
 
     $scope.excluir = function(index) {

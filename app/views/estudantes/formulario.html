@@ -23,7 +23,7 @@
           
           <div class="form-group" valdr-form-group>
             <label>Data de Nascimento</label>
-            <input name="data_de_nascimento" type="text" ng-model="estudante.data_de_nascimento" class="form-control" required>
+            <input name="data_de_nascimento" type="text" ng-model="estudante.data_de_nascimento" class="form-control" model-view-value="true" required ui-mask="99/99/9999"  ui-mask-placeholder ui-mask-placeholder-char="_">
           </div>
           
           <div class="form-group" valdr-form-group>
@@ -40,7 +40,7 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success" ng-disabled="formulario.$invalid" ng-click="salvar(estudante)">Salvar Estudante</button>
+        <button type="button" class="btn btn-success" ng-disabled="formulario.$invalid" ng-click="salvar(estudante, formulario)">Salvar Estudante</button>
         <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
       </div>
     </div>
