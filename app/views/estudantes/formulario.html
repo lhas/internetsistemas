@@ -1,49 +1,49 @@
+<form name="formulario" novalidate valdr-type="Estudante">
 
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      <h4 class="modal-title">Formulário de Estudante</h4>
-    </div>
-    <div class="modal-body">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Formulário de Estudante</h4>
+      </div>
+      <div class="modal-body">
+          
+          <div class="form-group" valdr-form-group>
+            <label>Nome</label>
+            <input type="text" name="nome" ng-model="estudante.nome" class="form-control" required>
+          </div>
+          
+          <div class="form-group" valdr-form-group>
+            <label>Sexo</label>
+            <select name="sexo" ng-model="estudante.sexo" required class="form-control">
+              <option value="Masculino">Masculino</option>
+              <option value="Feminino">Feminino</option>
+            </select>
+          </div>
+          
+          <div class="form-group" valdr-form-group>
+            <label>Data de Nascimento</label>
+            <input name="data_de_nascimento" type="text" ng-model="estudante.data_de_nascimento" class="form-control" required>
+          </div>
+          
+          <div class="form-group" valdr-form-group>
+            <label>E-mail</label>
+            <input name="email" type="email" ng-model="estudante.email" class="form-control" required>
+          </div>
+          
+          <div class="form-group" valdr-form-group ng-controller="CursosCtrl">
+            <label>Cursos <small>(Pressione CTRL para selecionar múltiplos)</small></label>
+            <select name="cursos" ng-model="estudante.cursos" required multiple="multiple" class="form-control" ng-options="item as item.nome for item in cursos track by item.nome">
+            </select>
+          </div>
 
-      <form>
         
-        <div class="form-group">
-          <label>Nome</label>
-          <input type="text" ng-model="estudante.nome" class="form-control" required>
-        </div>
-        
-        <div class="form-group">
-          <label>Sexo</label>
-          <select ng-model="estudante.sexo" required class="form-control">
-            <option value="Masculino">Masculino</option>
-            <option value="Feminino">Feminino</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label>Data de Nascimento</label>
-          <input type="text" ng-model="estudante.data_de_nascimento" class="form-control" required>
-        </div>
-        
-        <div class="form-group">
-          <label>E-mail</label>
-          <input type="email" ng-model="estudante.email" class="form-control" required>
-        </div>
-        
-        <div class="form-group" ng-controller="CursosCtrl">
-          <label>Cursos <small>(Pressione CTRL para selecionar múltiplos)</small></label>
-          <select ng-model="estudante.cursos" required multiple="multiple" class="form-control" ng-options="item as item.nome for item in cursos track by item.nome">
-          </select>
-        </div>
-
-      </form>
-      
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-success" ng-click="salvar(estudante)">Salvar Estudante</button>
-      <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" ng-disabled="formulario.$invalid" ng-click="salvar(estudante)">Salvar Estudante</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
     </div>
   </div>
-</div>
+
+</form>

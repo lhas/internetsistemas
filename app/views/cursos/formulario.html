@@ -1,25 +1,26 @@
+<form name="formulario" novalidate valdr-type="Curso">
 
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      <h4 class="modal-title">Formulário de Curso</h4>
-    </div>
-    <div class="modal-body">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Formulário de Curso</h4>
+      </div>
+      <div class="modal-body">
 
-      <form>
+          
+          <div class="form-group" valdr-form-group>
+            <label>Nome</label>
+            <input type="text" ng-model="curso.nome" name="nome" class="form-control" required>
+          </div>
+
         
-        <div class="form-group">
-          <label>Nome</label>
-          <input type="text" ng-model="curso.nome" class="form-control" required>
-        </div>
-
-      </form>
-      
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-success" ng-click="salvar(curso)">Salvar Curso</button>
-      <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" ng-disabled="formulario.$invalid" class="btn btn-success" ng-click="salvar(curso)">Salvar Curso</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
     </div>
   </div>
-</div>
+
+</form>

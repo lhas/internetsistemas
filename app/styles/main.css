@@ -81,3 +81,16 @@ body {
     border-bottom: 0;
   }
 }
+
+.valdr-message {
+  display: none;
+}
+.valdr-message.ng-invalid.ng-touched.ng-dirty {
+  display: inline-block;
+  margin-top: 20px;
+  background: #FFF;
+  border: 1px solid #F22613;
+  border-radius: 4px;
+  color: #F22613;
+  padding: 5px 10px;
+}
