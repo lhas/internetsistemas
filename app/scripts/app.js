@@ -58,7 +58,7 @@ angular
           }
         }
       }
-    })
+    });
   })
   .config(function ($routeProvider) {
     $routeProvider

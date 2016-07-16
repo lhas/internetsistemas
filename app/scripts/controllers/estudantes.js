@@ -18,13 +18,13 @@ angular.module('internetsistemasApp')
     });
 
     $scope.manipularModal = function(param) {
-      angular.element("#modal-formulario").modal(param);
-    }
+      angular.element('#modal-formulario').modal(param);
+    };
 
     $scope.salvar = function(estudante, formulario) {
       estudante.modifiedAt = new Date();
 
-      if($scope.editando == -1) {
+      if($scope.editando === -1) {
         estudante.createdAt = new Date();
         $scope.estudantes.push(estudante);
       } else {
@@ -34,20 +34,20 @@ angular.module('internetsistemasApp')
 
       $scope.estudante = {};
       $scope.editando = -1;
-      $scope.manipularModal("hide");
+      $scope.manipularModal('hide');
 
       formulario.$setPristine();
       formulario.$setUntouched();
-    }
+    };
 
     $scope.excluir = function(index) {
       $scope.estudantes.splice(index, 1);
       $scope.estudante = {};
-    }
+    };
 
     $scope.editar = function(index) {
       $scope.editando = index;
       $scope.estudante = angular.copy($scope.estudantes[index]);
-      $scope.manipularModal("show");
-    }
+      $scope.manipularModal('show');
+    };
   });

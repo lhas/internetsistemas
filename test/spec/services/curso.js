@@ -1,18 +1,45 @@
 'use strict';
 
-describe('Service: curso', function () {
+describe('Serviço de Curso', function () {
 
   // load the service's module
   beforeEach(module('internetsistemasApp'));
 
   // instantiate service
-  var curso;
-  beforeEach(inject(function (_curso_) {
-    curso = _curso_;
+  var cursoService;
+  beforeEach(inject(function (_cursoService_) {
+    cursoService = _cursoService_;
   }));
 
-  it('should do something', function () {
-    expect(!!curso).toBe(true);
+  it('deve carregar todos os cursos na pasta dados/', function () {
+    var cursos = [];
+
+    cursoService.getAll().then(function(result) {
+      cursos = result.data;
+
+      expect(cursos.length).toBe(3);
+    });
+  });
+
+  it('deve carregar AngularJS como primeiro curso', function () {
+    var cursos = [];
+
+    cursoService.getAll().then(function(result) {
+      cursos = result.data;
+
+      expect(cursos[0].nome).toEqual("AngularJS");
+    });
+  });
+
+  it('deve carregar React como último curso', function () {
+    var cursos = [];
+
+    cursoService.getAll().then(function(result) {
+      cursos = result.data;
+
+      var index = cursos.length;
+      expect(cursos[index].nome).toEqual("React");
+    });
   });
 
 });

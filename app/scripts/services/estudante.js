@@ -11,7 +11,7 @@ angular.module('internetsistemasApp')
   .service('estudanteService', function ($http) {
 
     this.getAll = function() {
-      return $http.get("dados/estudantes.json");
-    }
-    // AngularJS will instantiate a singleton by calling "new" on this function
+      return $http.get('dados/estudantes.json');
+    };
+    // AngularJS will instantiate a singleton by calling 'new' on this function
   });
